@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/images">
+        <file alias="logospm">res/LogoSPM.bmp</file>
+    </qresource>
+</RCC>

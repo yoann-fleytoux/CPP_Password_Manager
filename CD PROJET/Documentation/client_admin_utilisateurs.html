@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>Secure Password Manager</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div id="page">
+	<div id="bandeau">
+	</div>
+	<div id="menu">
+		<div class="menu_element"><a href="index.html">Présentation</a></div>
+		<div class="menu_element menu_element_actif"><a href="client.html">Documentation client</a></div>
+		<div class="menu_element"><a href="serveur.html">Documentation serveur</a></div>
+		<div class="menu_element"><a href="informations.html">Informations</a></div>
+	</div>
+	<div id="page_contenu">
+		<h2 id="page_titre">Documentation client</h2>
+		<h3 id="page_soustitre">Administration : utilisateurs</h3>
+		<div id="menu_gauche">
+			<div class="menu_element"><a href="client_installation.html" target="_self">Installation du client</a></div>
+			<div class="menu_element"><a href="client_configuration.html" target="_self">Configuration initiale du client</a></div>
+			<div class="menu_element"><a href="client_connexion.html" target="_self">Connexion utilisateur</a></div>
+			<div class="menu_element"><a href="client_motsdepasse.html" target="_self">Liste des mots de passe</a></div>
+			<div class="menu_element"><a href="client_admin_utilisateurs.html" target="_self">Administration : utilisateurs</a></div>
+			<div class="menu_element"><a href="client_admin_groupes.html" target="_self">Administration : groupes</a></div>
+			<div class="menu_element"><a href="client_admin_serveurs.html" target="_self">Administration : serveurs</a></div>
+			<div class="menu_element"><a href="client_admin_motsdepasse.html" target="_self">Administration : mots de passe</a></div>
+			<div class="menu_element"><a href="client_admin_sauvegarde.html" target="_self">Administration : sauvegarde</a></div>
+		</div>
+		<div class="contenu" id="contenu_droite">
+			L'interface de gestion des utilisateurs permet aux administrateurs de créer, modifier et supprimer des utilisateurs ainsi que de choisir les groupes auxquels un utilisateur appartient.<br /><br />
+			<img src="images/client_admin_utilisateurs1.jpg" /><br /><br />
+			Les boutons de modification, suppression et gestion des groupes d'un utilisateur s'activent lors de la sélection d'un utilisateur dans la liste.<br /><br />
+			<h4>Créer ou modifier un utilisateur</h4>
+			Lors de la création d'un utilisateur, le nom, identifiant et mot de passe sont demandés. Une case à cocher permet d'indiquer si l'utilisateur est administrateur et peut avoir accès aux fonctions d'administration sur son interface.<br /><br />
+			Lors de la modification d'un utilisateur sélectionné dans la liste, le nom, identifiant et mot de passe actuels sont renseignés et peuvent être modifiés. Une case à cocher indique si l'utilisateur est administrateur et peut être modifiée.<br /><br />
+			Les interfaces de création et de modification d'un utilisateur sont identiques.<br /><br />
+			<img src="images/client_admin_utilisateurs2.jpg" /><br /><br />
+			<h4>Supprimer un utilisateur</h4>
+			Lors de la suppression d'un utilisateur sélectionné dans la liste, ses informations sont supprimées de la base de données ainsi que ses liaisons éventuelles avec des groupes. S'il est actuellement connecté au système, l'utilisateur ne sera pas automatiquement déconnecté.<br /><br />
+			<h4>Gérer les groupes d'un utilisateur</h4>
+			La gestion des groupes de l'utilisateur sélectionné permet de choisir à quels groupes l'utilisateur appartient, et donc indirectement à quels mots de passe il aura accès.<br /><br />
+			L'interface présente la liste des groupes du système à gauche, et la liste des groupes de l'utilisateur à droite. Un groupe apparaissant dans la liste de droite n'apparait pas dans la liste de gauche.<br /><br />
+			Le bouton ">" permet d'ajouter le groupe sélectionné dans la liste de gauche aux groupes de l'utilisateur.<br />
+			Le bouton "<" permet d'enlever le groupe sélectionné dans la liste de droite des groupes de l'utilisateur.<br /><br />
+			<img src="images/client_admin_utilisateurs3.jpg" />
+		</div>
+		</div>
+	</div>
+	<div style="margin:30px" align="center">Secure Password Manager</div>
+</div>
+
+</body>
+</html>

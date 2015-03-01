@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>Secure Password Manager</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div id="page">
+	<div id="bandeau">
+	</div>
+	<div id="menu">
+		<div class="menu_element"><a href="index.html">Présentation</a></div>
+		<div class="menu_element"><a href="client.html">Documentation client</a></div>
+		<div class="menu_element menu_element_actif"><a href="serveur.html">Documentation serveur</a></div>
+		<div class="menu_element"><a href="informations.html">Informations</a></div>
+	</div>
+	<div id="page_contenu">
+		<h2 id="page_titre">Documentation serveur</h2>
+		<div class="contenu" id="contenu">
+			La partie serveur du logiciel Secure Password Manager est destinée à un usage en ligne de commande, de préférence sous un environnement Unix (tel que Debian). Il permet d'effectuer la configuration d'une nouvelle installation, de sauvegarder le serveur ou restaurer une sauvegarde, et de lancer le serveur en arrière-plan.<br /><br />
+			<h4>Installation du serveur</h4>
+			Le logiciel serveur nécessite des bibliothèques spécifiques présentes dans le dossier "usr lib - Serveur" à copier dans /usr/lib :
+			<ul>
+				<li>libicu*</li>
+				<li>libQt5*</li>
+			</ul>
+			<br />
+			D'autres bibliothèques spécifiques sont présentes dans le dossier "Linux-Serveur" et sont à conserver à côté de l'exécutable "spmd".<br /><br />
+			Le fichier db_structure contient la structure de la base de données et est copié dans un autre fichier une fois la configuration terminée. Il est à conserver tant que la configuration n'a pas été faite.<br /><br />
+			Par défaut, les fichiers écrits par le logiciel client sont placés dans HOME/spmd/<br /><br />
+			<h4>Configuration du serveur</h4>
+			La commande "spmd --install" permet de lancer la configuration du serveur avec les paramètres par défaut. Pour plus d'informations, voir la section "Usage ligne de commande"<br /><br />
+			<b>Note importante</b> : lors de la configuration, la base de données est créée et un utilisateur root ajouté. Tous les mots de passe stockés dans la base de données sont cryptés avec la clé publique RSA, et seront par la suite décryptés avec la clé privée lorsque nécessaire.<br />Il est important de conserver liés les fichiers de clés RSA et le fichier de la base de données, cette dernière ne pouvant pas être utilisée avec d'autres clés RSA que celles utilisées lors de la configuration du serveur.<br /><br />
+			<h4>Usage ligne de commande</h4>
+			<pre>
+    spmd
+
+      Lance le serveur avec comme fichier de configuration par defaut : HOME/spmd/spmd.conf
+
+    spmd --config &lt;fichier&gt;
+      Lance le serveur avec le fichier de configuration fourni en parametre.
+
+    spmd --install
+        [--config &lt;fichier&gt;]
+        [--priv-key &lt;fichier&gt;]
+        [--pub-key &lt;fichier&gt;]
+        [--database &lt;fichier&gt;]
+        [--port &lt;port&gt;]
+        [--use-existing-keys]
+
+      Installe le serveur avec les parametres fournis.
+      Le fichier de configuration est renseigne avec --config, ou est HOME/spmd/spmd.conf par defaut.
+      Le fichier de cle privee RSA est renseigne avec --priv-key, ou est HOME/spmd/private_key.pem par defaut.
+      Le fichier de cle publique RSA est renseigne avec --pub-key, ou est HOME/spmd/public_key.pem par defaut.
+      Le fichier de base de donnees est renseigne avec --database, ou est HOME/spmd/database.sqlite3 par defaut.
+      Le port d'ecoute du serveur est renseigne avec --port, 3665 par defaut.
+      Les cles RSA seront generees aleatoirement sauf si presence du parametre --use-existing-keys.
+      Le processus d'installation demandera confirmation en cas de fichiers existants.
+
+    spmd --backup
+         --file &lt;fichier&gt;
+        [--config &lt;fichier&gt;]
+
+      Effectue une sauvegarde des cles et base de donnees dans un fichier crypte.
+      Le fichier de configuration est renseigne avec --config, ou est HOME/spmd/spmd.conf par defaut.
+      Le fichier est crypte avec un mot de passe genere aleatoirement qui sera affiche.
+
+    spmd --restore
+         --file &lt;fichier&gt;
+         --password &lt;motdepasse&gt;
+        [--config &lt;fichier&gt;]
+
+      Restaure la sauvegarde a partir du fichier crypte.
+      Le fichier de configuration a ecrire est renseigne avec --config, ou est HOME/spmd/spmd.conf par defaut.
+
+    spmd --help
+	
+      Affiche cette aide.
+	
+	
+	Note : le dossier HOME sous Unix correspond au dossier %USERPROFILE% sous Windows.
+		</pre>
+		</div>
+	</div>
+	<div style="margin:30px" align="center">Secure Password Manager</div>
+</div>
+
+</body>
+</html>

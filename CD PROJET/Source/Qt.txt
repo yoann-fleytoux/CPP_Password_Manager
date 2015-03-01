@@ -1,0 +1,3 @@
+Version 5.1.1 / MinGW 4.8 / OpenGL
+
+Disponible sur qt-project.org : qt-windows-opensource-5.1.1-mingw48_opengl-x86-offline.exe

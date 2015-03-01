@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>Secure Password Manager</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div id="page">
+	<div id="bandeau">
+	</div>
+	<div id="menu">
+		<div class="menu_element"><a href="index.html">Présentation</a></div>
+		<div class="menu_element menu_element_actif"><a href="client.html">Documentation client</a></div>
+		<div class="menu_element"><a href="serveur.html">Documentation serveur</a></div>
+		<div class="menu_element"><a href="informations.html">Informations</a></div>
+	</div>
+	<div id="page_contenu">
+		<h2 id="page_titre">Documentation client</h2>
+		<h3 id="page_soustitre">Administration : mots de passe</h3>
+		<div id="menu_gauche">
+			<div class="menu_element"><a href="client_installation.html" target="_self">Installation du client</a></div>
+			<div class="menu_element"><a href="client_configuration.html" target="_self">Configuration initiale du client</a></div>
+			<div class="menu_element"><a href="client_connexion.html" target="_self">Connexion utilisateur</a></div>
+			<div class="menu_element"><a href="client_motsdepasse.html" target="_self">Liste des mots de passe</a></div>
+			<div class="menu_element"><a href="client_admin_utilisateurs.html" target="_self">Administration : utilisateurs</a></div>
+			<div class="menu_element"><a href="client_admin_groupes.html" target="_self">Administration : groupes</a></div>
+			<div class="menu_element"><a href="client_admin_serveurs.html" target="_self">Administration : serveurs</a></div>
+			<div class="menu_element"><a href="client_admin_motsdepasse.html" target="_self">Administration : mots de passe</a></div>
+			<div class="menu_element"><a href="client_admin_sauvegarde.html" target="_self">Administration : sauvegarde</a></div>
+		</div>
+		<div class="contenu" id="contenu_droite">
+			L'interface de gestion des mots de passe permet aux administrateurs de créer, modifier et supprimer des mots de passe ainsi que de choisir les groupes auxquels un mot de passe est associé.<br /><br />
+			<img src="images/client_admin_motsdepasse1.jpg" /><br /><br />
+			Les boutons de modification, suppression et gestion des groupes d'un mot de passe s'activent lors de la sélection d'un mot de passe dans la liste.<br /><br />
+			<h4>Créer ou modifier un mot de passe</h4>
+			Lors de la création d'un mot de passe, le nom, identifiant, mot de passe et serveur sont demandés.<br /><br />
+			Lors de la modification d'un mot de passe sélectionné dans la liste, le nom, identifiant, mot de passe et serveur actuels sont renseignés et peuvent être modifiés.<br /><br />
+			Les interfaces de création et de modification d'un mot de passe sont identiques.<br /><br />
+			<img src="images/client_admin_motsdepasse2.jpg" /><br /><br />
+			<h4>Supprimer un mot de passe</h4>
+			Lors de la suppression d'un mot de passe sélectionné dans la liste, ses informations sont supprimées de la base de données ainsi que ses liaisons éventuelles avec des groupes.<br /><br />
+			<h4>Gérer les groupes d'un mot de passe</h4>
+			La gestion des groupes du mot de passe sélectionné permet de choisir à quels groupes le mot de passe est associé, et donc quels groupes auront accès au mot de pase.<br /><br />
+			L'interface présente la liste des groupes du système à gauche, et la liste des groupes du mot de passe à droite. Un groupe apparaissant dans la liste de droite n'apparait pas dans la liste de gauche.<br /><br />
+			Le bouton ">" permet d'ajouter le groupe sélectionné dans la liste de gauche aux groupes du mot de passe.<br />
+			Le bouton "<" permet d'enlever le groupe sélectionné dans la liste de droite des groupes du mot de passe.<br /><br />
+			<img src="images/client_admin_motsdepasse3.jpg" />
+		</div>
+		</div>
+	</div>
+	<div style="margin:30px" align="center">Secure Password Manager</div>
+</div>
+
+</body>
+</html>
